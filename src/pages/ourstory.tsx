@@ -167,27 +167,27 @@ function Timeline() {
   }, []);
 
   const items = [
-  {
-    year: "1974",
-    title: "The Beginning",
-    text: "Three brothers — Shivprasad Nuwal, Late Mishrilalji Nuwal, and Jagdishji Nuwal — started a small ice-cream lorry in Nadiad, Gujarat. The eldest brother, Shivprasad Nuwal, continued leading the original Nadiad journey as the foundation of Satyanarayan Ice Cream.",
-  },
-  {
-    year: "1989",
-    title: "Expansion to Mehsana",
-    text: "Late Mishrilalji Nuwal moved to Mehsana, Gujarat, to open Satyanarayan Ice Cream, marking the brand's first expansion.",
-  },
-  {
-    year: "1995",
-    title: "Anand Chapter Begins",
-    text: "Jagdishji Nuwal moved to Anand, Gujarat, to open Satyanarayan Ice Cream, continuing the family's growth.",
-  },
-  {
-    year: "2026",
-    title: "Three Generations Strong",
-    text: "Today, Satyanarayan Ice Cream has grown to 10+ stores across Gujarat, India — still rooted in family tradition and hand-crafted quality.",
-  },
-];
+    {
+      year: "1974",
+      title: "The Beginning",
+      text: "Three brothers — Shivprasad Nuwal, Late Mishrilalji Nuwal, and Jagdishji Nuwal — started a small ice-cream lorry in Nadiad, Gujarat.",
+    },
+    {
+      year: "1989",
+      title: "Expansion to Mehsana",
+      text: "Late Mishrilalji Nuwal moved to Mehsana, Gujarat, marking the brand's first expansion.",
+    },
+    {
+      year: "1995",
+      title: "Anand Chapter Begins",
+      text: "Jagdishji Nuwal moved to Anand, Gujarat, continuing the family's growth.",
+    },
+    {
+      year: "2026",
+      title: "Three Generations Strong",
+      text: "Now 10+ stores across Gujarat, still rooted in tradition and hand-crafted quality.",
+    },
+  ];
 
   return (
     <section ref={ref} className="py-32 md:py-40 overflow-hidden">
@@ -201,45 +201,45 @@ function Timeline() {
           Our Journey
         </h2>
 
-        {/* Timeline wrapper */}
         <div className="timeline-wrapper relative">
 
-          {/* center line */}
-          <div className="absolute left-1/2 top-0 -translate-x-1/2 h-full w-px bg-border/40">
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 md:-translate-x-1/2 h-full w-px bg-border/40">
             <div className="timeline-progress absolute top-0 left-0 w-full h-full bg-primary" />
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-24 md:space-y-32">
             {items.map((item, i) => (
               <div
                 key={item.year}
-                className="timeline-card grid md:grid-cols-2 gap-12 items-center relative"
+                className="timeline-card relative md:grid md:grid-cols-2 gap-12 items-center"
               >
                 {/* Content */}
                 <div
-                  className={`${
-                    i % 2 === 0
-                      ? "md:text-right md:pr-16"
-                      : "md:col-start-2 md:pl-16"
-                  }`}
+                  className={`
+                    pl-12 md:pl-0
+                    ${
+                      i % 2 === 0
+                        ? "md:text-right md:pr-16"
+                        : "md:col-start-2 md:pl-16"
+                    }
+                  `}
                 >
-                  <span className="text-primary font-display text-3xl md:text-4xl">
+                  <span className="text-primary font-display text-2xl md:text-4xl">
                     {item.year}
                   </span>
 
-                  <h3 className="font-display text-3xl md:text-4xl mt-3">
+                  <h3 className="font-display text-2xl md:text-4xl mt-2 md:mt-3">
                     {item.title}
                   </h3>
 
-                  <p className="text-muted-foreground mt-3 max-w-md inline-block">
+                  <p className="text-muted-foreground mt-2 md:mt-3 max-w-md">
                     {item.text}
                   </p>
                 </div>
 
                 {/* Dot */}
-                <div className="hidden md:block">
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-primary shadow-glow" />
-                </div>
+                <div className="absolute left-4 md:left-1/2 top-6 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 h-3 w-3 md:h-4 md:w-4 rounded-full bg-primary shadow-glow" />
               </div>
             ))}
           </div>

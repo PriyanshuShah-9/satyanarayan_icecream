@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useSmoothScroll } from "./hooks/useSmoothScroll";
+import { Preloader } from "@/components/Preloader";
 
 import Home from "./pages/index";
 import Menu from "./pages/menu";
@@ -19,13 +20,16 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/menu" element={<Menu />} />
-      <Route path="/locations" element={<Locations />} />
-      <Route path="/franchise" element={<Franchise />} />
-      <Route path="/our-story" element={<Story />} />
-    </Routes>
+    <>
+      <Preloader /> {/* ✅ this is all you need */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/our-story" element={<Story />} />
+      </Routes>
+    </>
   );
 }
 

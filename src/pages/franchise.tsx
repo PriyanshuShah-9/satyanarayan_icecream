@@ -8,10 +8,10 @@ import { Helmet } from "react-helmet-async";
 gsap.registerPlugin(ScrollTrigger);
 
 const benefits = [
-  { t: "Heritage brand", d: "Half a century of trust, recognition, and customer loyalty." },
-  { t: "Proven model", d: "Forty-two profitable parlours and a refined operating playbook." },
-  { t: "Full training", d: "Three-week immersion at our master kitchen in Ahmedabad." },
-  { t: "Marketing support", d: "Launch campaign, regional press, and ongoing creative." },
+  { t: "Trusted local brand", d: "Well-known in the community with a loyal, repeat customer base built over the years." },
+  { t: "Consistent quality", d: "Recognized for delivering high-quality ice cream and maintaining customer satisfaction." },
+  { t: "Established operations", d: "Fully set up outlet with proven daily operations and supplier network in place." },
+  { t: "Growth potential", d: "Strong foundation with opportunities to expand menu, delivery, and reach." },
 ];
 
 const FORM_URL =

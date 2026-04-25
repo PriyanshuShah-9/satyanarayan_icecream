@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { SiteShell } from "../components/SiteShell";
 import hero from "../assets/hero.jpg";
 import story1 from "../assets/story-1.jpg";
-import story3 from "../assets/story-3.jpg";
+import story3 from "../assets/story-3.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -212,9 +212,9 @@ function Story() {
 
 function Pillars() {
   const items = [
-    { n: "01", t: "Single-origin milk", d: "Sourced from a co-operative of fifty family farms in Gujarat." },
-    { n: "02", t: "Natural ingredients", d: "Real fruit, real spices, real nuts. Never an essence, never a powder." },
-    { n: "03", t: "Hand-churned", d: "Small batches, traditional pots, the rhythm of an unhurried craft." },
+    { n: "01", t: "Quality dairy", d: "Made with rich, creamy milk sourced from trusted local farms." },
+    { n: "02", t: "Seasonal freshness", d: "We use fresh fruits when in season, and premium blends year-round." },
+    { n: "03", t: "Crafted with care", d: "Every batch is churned for smooth texture and consistent flavor." },
   ];
   const root = useRef<HTMLDivElement>(null);
 

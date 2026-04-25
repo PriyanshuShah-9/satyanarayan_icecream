@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { SiteShell } from "../components/SiteShell";
-import story3 from "../assets/story-3.jpg";
+import story3 from "../assets/story-3.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
