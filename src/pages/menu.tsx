@@ -10,29 +10,46 @@ gsap.registerPlugin(ScrollTrigger);
 
 type Item = {
   name: string;
-  cat: "Ice cream" | "Sundae" | "Shakes" | "Lassi";
+  cat: "Ice Cream" | "Sundae" | "Shakes" | "Lassi";
   notes: string;
 };
 
 const items: Item[] = [
-  { name: "Kesar Pista", cat: "Ice cream", notes: "Saffron, pistachio, cardamom" },
-  { name: "Lotus Biscoff", cat: "Ice cream", notes: "Reduced milk, slow churned" },
-  { name: "Belgian Chocolate", cat: "Ice cream", notes: "Fig, almond, honey" },
-  { name: "Calcutti Paan", cat: "Ice cream", notes: "Betel leaf, gulkand, fennel" },
-  { name: "Mango Alphonso", cat: "Ice cream", notes: "Single-origin Ratnagiri mango" },
-  { name: "Choco Brownie", cat: "Shakes", notes: "Custard apple, hand-pulped" },
-  { name: "Kaju Anjeer", cat: "Shakes", notes: "70% cocoa, Madagascan vanilla" },
-  { name: "Oreo Blast", cat: "Shakes", notes: "Mahabaleshwar berries" },
-  { name: "Rose Lassi", cat: "Lassi", notes: "Rose syrup, basil seed, vermicelli" },
-  { name: "Rajwadi Lassi", cat: "Lassi", notes: "Saffron, dry fruits, kulfi" },
-  { name: "Hot Brownie w. Vanilla", cat: "Sundae", notes: "Warm brownie, vanilla, chocolate" },
-  { name: "Triple Sundae", cat: "Sundae", notes: "Mango, passionfruit, coconut" },
+  // ICE CREAM
+  { name: "Lotus Biscoff", cat: "Ice Cream", notes: "Caramelized biscuit spread, rich and creamy" },
+  { name: "Belgian Chocolate", cat: "Ice Cream", notes: "Dark chocolate, smooth and indulgent" },
+  { name: "Sp. Anmol Ratan", cat: "Ice Cream", notes: "Kesar, mava, and dryfruit royal blend" },
+  { name: "Roasted Dryfruit", cat: "Ice Cream", notes: "Dry fruits roasted in ghee, rich and aromatic" },
+  { name: "Mava Malti", cat: "Ice Cream", notes: "Mava, dry fruits, and gulkand blend" },
+  { name: "American Dryfruit", cat: "Ice Cream", notes: "Premium mixed nuts, rich and crunchy" },
+
+  // SHAKES
+  { name: "Ferrero Rocher Nutella", cat: "Shakes", notes: "Hazelnut chocolate, ultra premium blend" },
+  { name: "Kaju Anjeer", cat: "Shakes", notes: "Cashew and fig, royal dry fruit mix" },
+  { name: "Brownella", cat: "Shakes", notes: "Chocolate brownie + Nutella fusion" },
+  { name: "Oreo Blast", cat: "Shakes", notes: "Cookies and cream, crunchy and smooth" },
+  { name: "Choco Brownie", cat: "Shakes", notes: "Rich chocolate shake with brownie chunks" },
+  { name: "Cold Cocoa Special", cat: "Shakes", notes: "Cold cocoa with ice cream, chips, and cashew topping" },
+
+  // SUNDAES
+  { name: "Triple Sundae", cat: "Sundae", notes: "Three flavors layered, fruity and creamy" },
+  { name: "Biscoff Brownie Overload", cat: "Sundae", notes: "Brownie + biscoff, rich dessert combo" },
+  { name: "Hot Brownie with Vanilla", cat: "Sundae", notes: "Warm brownie, vanilla, chocolate drizzle" },
+  { name: "Double Sundae", cat: "Sundae", notes: "Two flavors, balanced and creamy" },
+  { name: "Single Sundae", cat: "Sundae", notes: "Simple classic sundae" },
+  { name: "Dryfruit Sundae", cat: "Sundae", notes: "Nutty, rich, and mildly sweet" },
+
+  // LASSI
+  { name: "Rajwadi", cat: "Lassi", notes: "Saffron, dry fruits, thick and royal" },
+  { name: "Dryfruit", cat: "Lassi", notes: "Loaded with mixed nuts" },
+  { name: "Kaju", cat: "Lassi", notes: "Smooth cashew-based richness" },
+  { name: "Mango", cat: "Lassi", notes: "Sweet and refreshing fruit lassi" }
 ];
 
-const cats = ["Ice cream", "Sundae", "Shakes", "Lassi"] as const;
+const cats = ["Ice Cream", "Sundae", "Shakes", "Lassi"] as const;
 
 export default function MenuPage() {
-  const [active, setActive] = useState<(typeof cats)[number]>("Ice cream");
+  const [active, setActive] = useState<(typeof cats)[number]>("Ice Cream");
   const [hovered, setHovered] = useState<string | null>(null);
   const grid = useRef<HTMLDivElement>(null);
 
@@ -140,10 +157,6 @@ export default function MenuPage() {
               <p className="mt-3 text-sm text-white/70 leading-relaxed">
                 {item.notes}
               </p>
-
-              <div className="mt-8 text-xs uppercase tracking-widest text-white/60">
-                Single scoop
-              </div>
             </article>
           ))}
         </div>
