@@ -40,7 +40,7 @@ const contacts = [
     icon: Facebook,
     label: "Facebook",
     value: "Satyanarayan Ice Cream",
-    href: "https://www.facebook.com",
+    href: "https://www.facebook.com/share/1DYw8Qanig/?mibextid=wwXIfr",
   },
 ];
 
