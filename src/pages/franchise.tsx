@@ -21,8 +21,8 @@ const contacts = [
   {
   icon: Phone,
   label: "Call us",
-  value: "+91 98253 22117 / +91 94284 36003",
-  href: "tel:+919825322117",
+  value: "+91 87339 65749",
+  href: "tel:+918733965749",
   },
   {
     icon: Mail,
