@@ -126,7 +126,7 @@ function Quote() {
         </p>
 
         <p className="mt-10 text-sm uppercase tracking-widest text-muted-foreground">
-          Shivprasad Nuwal, Master Churner
+          Shivprasad Ji Nuwal, Master Churner
         </p>
       </div>
     </section>
@@ -170,7 +170,7 @@ function Timeline() {
     {
       year: "1974",
       title: "The Beginning",
-      text: "Three brothers — Shivprasad Nuwal, Late Mishrilalji Nuwal, and Jagdishji Nuwal — started a small ice-cream lorry in Nadiad, Gujarat.",
+      text: "Three brothers — Shivprasad Ji Nuwal, Late Mishrilalji Nuwal, and Jagdishji Nuwal — started a small ice-cream lorry in Nadiad, Gujarat.",
     },
     {
       year: "1989",
